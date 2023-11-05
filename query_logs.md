@@ -1050,3 +1050,82 @@ SELECT * FROM Master LIMIT 1
 ```
 
 
+05-Nov-2023 01:17 (UTC):
+```sql
+CREATE TABLE Master (id INTEGER PRIMARY KEY AUTOINCREMENT,symboling, normalized_losses, make, fuel_type, aspiration, num_of_doors, body_style, drive_wheels, engine_location, wheel_base, length, width, height, curb_weight, engine_type, num_of_cylinders, engine_size, fuel_system, bore, stroke, compression_ratio, horsepower, peak_rpm, city_mpg, highway_mpg, price)
+```
+
+
+05-Nov-2023 01:17 (UTC):
+```sql
+INSERT INTO Master(symboling, normalized_losses, make, fuel_type, aspiration, num_of_doors, body_style, drive_wheels, engine_location, wheel_base, length, width, height, curb_weight, engine_type, num_of_cylinders, engine_size, fuel_system, bore, stroke, compression_ratio, horsepower, peak_rpm, city_mpg, highway_mpg, price) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+```
+
+
+05-Nov-2023 01:17 (UTC):
+```sql
+SELECT * FROM Master LIMIT 1
+```
+
+
+05-Nov-2023 01:17 (UTC):
+```sql
+UPDATE Master SET make = 'alfa_romero' WHERE make = 'alfa-romero'
+```
+
+
+05-Nov-2023 01:17 (UTC):
+```sql
+SELECT * FROM Master LIMIT 1
+```
+
+
+05-Nov-2023 01:17 (UTC):
+```sql
+DELETE FROM Master WHERE make = 'alfa_romero'
+```
+
+
+05-Nov-2023 01:17 (UTC):
+```sql
+SELECT * FROM Master
+```
+
+
+05-Nov-2023 01:17 (UTC):
+```sql
+CREATE TABLE Master (id INTEGER PRIMARY KEY AUTOINCREMENT,symboling, normalized_losses, make, fuel_type, aspiration, num_of_doors, body_style, drive_wheels, engine_location, wheel_base, length, width, height, curb_weight, engine_type, num_of_cylinders, engine_size, fuel_system, bore, stroke, compression_ratio, horsepower, peak_rpm, city_mpg, highway_mpg, price)
+```
+
+
+05-Nov-2023 01:17 (UTC):
+```sql
+INSERT INTO Master(symboling, normalized_losses, make, fuel_type, aspiration, num_of_doors, body_style, drive_wheels, engine_location, wheel_base, length, width, height, curb_weight, engine_type, num_of_cylinders, engine_size, fuel_system, bore, stroke, compression_ratio, horsepower, peak_rpm, city_mpg, highway_mpg, price) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+```
+
+
+05-Nov-2023 01:17 (UTC):
+```sql
+SELECT * FROM Master LIMIT 5;
+```
+
+
+05-Nov-2023 01:17 (UTC):
+```sql
+UPDATE Master SET "normalized_losses" = 'Unknown'  
+            WHERE "normalized_losses" IS "?";
+```
+
+
+05-Nov-2023 01:17 (UTC):
+```sql
+DELETE FROM Master WHERE "id" IS 1;
+```
+
+
+05-Nov-2023 01:17 (UTC):
+```sql
+SELECT * FROM Master LIMIT 1
+```
+
+
