@@ -7,9 +7,13 @@ requests==2.26.0
 ruff==0.0.284
 
 #Data Science
+jupyter
 pandas
+numpy
+matplotlib
+seaborn
 pyspark
-
+findspark
 
 #other
 requests
