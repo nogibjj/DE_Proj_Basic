@@ -12,7 +12,7 @@ def write_log(query, log_file="./query_logs.md"):
     dt_string = now.strftime("%d-%b-%Y %H:%M") + " (UTC)"
 
     with open(log_file, "a") as file:
-        file.write(f"{dt_string}:\n```sql\n{query}\n```\n\n")
+        file.write(f"{dt_string}:\n```console\n{query}\n```\n\n")
         file.write("\n")
         file.close()
     pass
