@@ -29,7 +29,9 @@ def delete_data(file_name="Master.csv", auto="T"):
         file_path = "./Data/{}".format(file_name)
     else:
         file_path = file_name
-    os.remove(file_path)
+    # delete Data file
+    if os.path.exists(file_path):
+        os.remove(file_path)
     pass
 
 

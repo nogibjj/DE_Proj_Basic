@@ -42,7 +42,7 @@ def handle_arguments(args):
     elif args.action == "clear_log":
         parser.add_argument("log_file", type=str, nargs="?", default="./query_logs.md")
     elif args.action == "query":
-        parser.add_argument("query", type=str, nargs="?", default="SELECT AVG(price) from df)")
+        parser.add_argument("query", type=str, nargs="?", default="SELECT AVG(price) from df")
 
     # parse again with ever
     return parser.parse_args(sys.argv[1:])
