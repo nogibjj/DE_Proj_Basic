@@ -48,7 +48,7 @@ def test_main():
         text=True,
         check=True,
     )
-    
+
     assert "13207" in result.stdout
 
 

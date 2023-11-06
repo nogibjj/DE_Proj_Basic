@@ -9,9 +9,10 @@ import argparse
 sys.path.insert(0, "./mylib")
 
 # Import Custom Libraries functions
-from mylib.logs import clear_log, write_log # noqa: E402
+from mylib.logs import clear_log, write_log  # noqa: E402
 from mylib.data_csv import create_data, delete_data  # noqa: E402
 from mylib.lib_spark import create_spark, end_spark, query  # noqa: E402
+
 
 def handle_arguments(args):
     """To Handle Query Arguments"""
@@ -42,15 +43,18 @@ def handle_arguments(args):
     elif args.action == "clear_log":
         parser.add_argument("log_file", type=str, nargs="?", default="./query_logs.md")
     elif args.action == "query":
-        parser.add_argument("query", type=str, nargs="?", default="SELECT AVG(price) from df")
+        parser.add_argument(
+            "query", type=str, nargs="?", default="SELECT AVG(price) from df"
+        )
 
     # parse again with ever
     return parser.parse_args(sys.argv[1:])
 
+
 def main():
     """To execute functions in order"""
     args = handle_arguments(sys.argv[1:])
-    
+
     if args.action == "create_data":
         print("processing...")
         create_data(args.source, args.file_name, args.auto)
@@ -65,19 +69,19 @@ def main():
         return "processed"
     elif args.action == "query":
 
-        #start the spark session
+        # start the spark session
         spark = create_spark("SparkSession")
         write_log("Spark Session Created")
 
-        #read the csv into spark Dataframe
+        # read the csv into spark Dataframe
         df = spark.read.csv("./Data/Master.csv", header=True, inferSchema=True)
         write_log("CSV Read into Spark Dataframe")
 
-        #execute the query
+        # execute the query
         query(spark, df, args.query, "df")
         write_log(f"{args.query} Executed")
 
-        #stop the spark session
+        # stop the spark session
         end_spark(spark)
         write_log("Spark Session Stopped")
 
