@@ -214,3 +214,27 @@ Spark Session Stopped
 ```
 
 
+06-Nov-2023 08:30 (UTC):
+```console
+Spark Session Created
+```
+
+
+06-Nov-2023 08:31 (UTC):
+```console
+CSV Read into Spark Dataframe
+```
+
+
+06-Nov-2023 08:31 (UTC):
+```console
+SELECT AVG(price) from df Executed
+```
+
+
+06-Nov-2023 08:31 (UTC):
+```console
+Spark Session Stopped
+```
+
+
